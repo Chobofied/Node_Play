@@ -1,11 +1,9 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.send('respond with a test');
+});
 
-
-router.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/test.html'));
-    //__dirname : It will resolve to your project folder.
-  });
+module.exports = router;
